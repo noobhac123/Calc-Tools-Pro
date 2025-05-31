@@ -1,0 +1,998 @@
+/* css/style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #007BFF; /* Professional Blue */
+    --primary-hover-color: #0056b3;
+    --secondary-color: #6c757d; /* Muted Gray */
+    --accent-color: #17a2b8;   /* Teal Accent */
+    --light-color: #f8f9fa;    /* Light Background */
+    --dark-color: #343a40;     /* Dark Text */
+    --card-bg-color: #ffffff;
+    --border-color: #dee2e6;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --shadow-hover-color: rgba(0, 0, 0, 0.15);
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --star-selected-color: #FFD700; /* Gold for stars */
+    --star-default-color: #ccc;    /* Light grey for empty stars */
+    --font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --header-height: 70px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; 
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    line-height: 1.6;
+    font-size: 16px;
+    padding-top: var(--header-height); 
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-hover-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header */
+header {
+    background: white;
+    color: var(--dark-color);
+    padding: 15px 0;
+    box-shadow: 0 2px 8px var(--shadow-color);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+.logo i {
+    margin-right: 8px;
+    color: var(--accent-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: var(--dark-color);
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Breadcrumb for calculator pages and static pages */
+.breadcrumb-nav {
+    padding-top: 10px; /* Reduced top padding */
+    padding-bottom: 10px; /* Added bottom padding for space from title */
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+.breadcrumb-nav a {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
+}
+.breadcrumb-nav span {
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+
+/* Hero Section (Homepage) */
+.hero {
+    background: linear-gradient(rgba(0, 123, 255, 0.8), rgba(0, 86, 179, 0.8)), url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dG9vbHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60') no-repeat center center/cover;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    margin-bottom: 0; 
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    animation: fadeInDown 1s ease-out;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 50px 0; 
+    background-color: #fff; 
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.feature-item h3 {
+    font-size: 1.3rem;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.feature-item p {
+    font-size: 0.95rem;
+    color: var(--secondary-color);
+    line-height: 1.7;
+}
+.why-choose-us .container > div[style*="text-align: center"] { 
+    margin-top: 30px;
+    padding: 20px;
+    background-color: var(--light-color);
+    border-radius: 8px;
+}
+.why-choose-us .container > div[style*="text-align: center"] p {
+     color: var(--dark-color);
+     font-size: 1rem;
+}
+
+
+/* Section Title Styling */
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+    font-weight: 600;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* Calculator List / Cards */
+#calculator-list-section { 
+    padding: 60px 0 40px 0; 
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    align-items: stretch; 
+}
+
+.card {
+    background-color: var(--card-bg-color);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    text-align: center;    
+    overflow: hidden; 
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px var(--shadow-hover-color);
+}
+
+.card-icon {
+    font-size: 3rem; 
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    width: 70px;
+    height: 70px;
+    background-color: #e7f3ff; 
+    border-radius: 50%;
+    display: flex;         
+    align-items: center;   
+    justify-content: center;
+    flex-shrink: 0; 
+}
+
+.card h3 {
+    margin-top: 0; 
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+    color: var(--dark-color);
+    font-weight: 600;
+    word-break: break-word; 
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: var(--secondary-color);
+    flex-grow: 1; 
+    margin-bottom: 20px; 
+    word-break: break-word; 
+    overflow-wrap: break-word; 
+}
+
+.card .btn {
+    margin-top: auto; 
+    flex-shrink: 0; 
+}
+
+
+/* === Button Refinements === */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 30px; 
+    border: none;
+    border-radius: 50px; 
+    text-decoration: none;
+    font-size: 1rem; 
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.25s ease-out, transform 0.15s ease-out, box-shadow 0.25s ease-out; 
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.25); 
+    position: relative; 
+    overflow: hidden; 
+    -webkit-tap-highlight-color: transparent;
+    outline: none; 
+}
+
+.btn i { 
+    margin-right: 8px;
+}
+.btn i.fa-arrow-right { 
+    margin-right: 0;
+    margin-left: 8px;
+}
+
+
+.btn:hover {
+    background-color: var(--primary-hover-color);
+    box-shadow: 0 7px 18px rgba(0, 123, 255, 0.35); 
+    transform: translateY(-3px); 
+}
+
+.btn:active {
+    transform: translateY(-1px) scale(0.97); 
+    box-shadow: 0 3px 8px rgba(0, 123, 255, 0.2); 
+    outline: none; 
+}
+
+.calculator-container .btn:not(.copy-btn):not(.btn-feedback):not(.btn-feedback-submit-star),
+.contact-form-container .btn { 
+    width: 100%;
+    padding: 15px; 
+    font-size: 1.1rem;
+}
+
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+    box-shadow: 0 4px 10px rgba(108, 117, 125, 0.2);
+    -webkit-tap-highlight-color: transparent; 
+    outline: none; 
+}
+.btn-secondary:hover {
+    background-color: #5a6268; 
+    box-shadow: 0 6px 15px rgba(108, 117, 125, 0.3);
+    transform: translateY(-2px); 
+}
+.btn-secondary:active {
+    transform: translateY(0px) scale(0.98);
+    box-shadow: 0 2px 5px rgba(108, 117, 125, 0.15);
+    outline: none; 
+}
+
+.result-area .copy-btn {
+    padding: 10px 18px; 
+    font-size: 0.95rem;
+    display: inline-block; 
+    vertical-align: middle; 
+    position: relative; 
+    overflow: hidden; 
+    margin-top: 15px; 
+    transition: background-color 0.2s ease-out, transform 0.15s ease-out, box-shadow 0.2s ease-out;
+    -webkit-tap-highlight-color: transparent; 
+}
+
+.result-area .copy-btn .btn-text {
+    display: inline-block;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out; 
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.result-area .copy-btn.is-changing .btn-text {
+    opacity: 0;
+    transform: translateY(5px); 
+}
+
+.result-area .copy-btn i { 
+    margin-right: 6px;
+    transition: opacity 0.2s ease-in-out; 
+}
+
+/* Calculator Page Specific Styles & Static Page Titles */
+.calculator-page-title, 
+.static-page-main-title { /* Used for titles on contact, privacy etc. */
+    text-align: center;
+    margin-top: 10px; /* Adjusted margin for pages with top ad */
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    color: var(--dark-color);
+    font-weight: 600;
+}
+
+.calculator-container {
+    background-color: var(--card-bg-color);
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px var(--shadow-color);
+    max-width: 650px;
+    margin: 20px auto 40px; 
+}
+
+/* === Input Field Focus States === */
+.form-group {
+    margin-bottom: 30px; 
+    position: relative; 
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    color: var(--secondary-color);
+    font-size: 0.95rem;
+    position: absolute; 
+    left: 16px; 
+    top: 15px;  
+    pointer-events: none; 
+    transition: all 0.2s ease-out;
+    background-color: var(--card-bg-color); 
+    padding: 0 5px; 
+}
+.form-group label i { 
+    margin-right: 5px;
+}
+
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group select {
+    width: 100%;
+    padding: 14px 15px; 
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: var(--font-family);
+    transition: border-color 0.25s ease-out, box-shadow 0.25s ease-out;
+    background-color: var(--card-bg-color); 
+}
+
+
+.form-group input:focus + label,
+.form-group input.has-value + label, 
+.form-group select:focus + label,
+.form-group select.has-value + label { 
+    top: -10px; 
+    font-size: 0.8rem; 
+    color: var(--primary-color); 
+}
+
+
+.form-group input[type="text"]:focus,
+.form-group input[type="number"]:focus,
+.form-group input[type="date"]:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3.5px rgba(0, 123, 255, 0.2), 0 1px 3px rgba(0,0,0,0.07); 
+}
+
+.form-group input:focus::placeholder {
+  /* color: transparent; */ 
+}
+.form-group .form-text { 
+    font-size: 0.8rem; 
+    color: #6c757d; 
+    display:block; 
+    margin-top:5px;
+    padding-left: 2px;
+}
+
+
+.result-area {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: var(--light-color);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.result-area h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.result-area p {
+    font-size: 1.1rem; 
+    font-weight: 500; 
+    margin: 10px 0 0;
+    color: var(--dark-color);
+}
+
+.result-area .error {
+    color: var(--error-color);
+    font-weight: 500;
+}
+
+.result-area .success, .result-area .normal-weight { 
+    color: var(--success-color);
+    font-weight: 600;
+}
+.result-area .underweight, .result-area .overweight, .result-area .obesity { 
+    color: var(--error-color); 
+    font-weight: 600;
+}
+
+/* Calculator Content Sections & Static Page Content Sections */
+.calculator-info-section, .static-page-content { 
+    margin-top: 20px; 
+    margin-bottom: 40px;
+    padding: 30px; 
+    background-color: #fff;
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px var(--shadow-color); 
+}
+.calculator-info-section h2, .static-page-content h2 { 
+    font-size: 1.6rem; 
+    color: var(--primary-color);
+    margin-bottom: 20px; 
+    border-bottom: 2px solid var(--light-color);
+    padding-bottom: 12px;
+    font-weight: 600;
+}
+.calculator-info-section p, .calculator-info-section ul,
+.static-page-content p, .static-page-content ul { 
+    font-size: 1rem; 
+    line-height: 1.8; 
+    color: var(--secondary-color); 
+}
+.calculator-info-section ul, .static-page-content ul { 
+    list-style: disc;
+    padding-left: 25px; 
+    margin-top:15px;
+}
+.calculator-info-section ul li, .static-page-content ul li { 
+    margin-bottom: 10px; 
+}
+.calculator-info-section strong, .static-page-content strong { 
+    color: var(--dark-color);
+    font-weight: 600; 
+}
+.calculator-info-section code { 
+    background-color: #e9ecef;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.calculator-info-section dl dt {
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-top: 10px;
+}
+.calculator-info-section dl dd {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+.calculator-info-section dl dd ul {
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+/* Contact Page Specific Form Styles */
+.contact-form-container { 
+    max-width: 700px; 
+    margin: 0px auto 30px auto; 
+    background-color: var(--card-bg-color); 
+    padding: 30px; 
+    border-radius: 8px; 
+    box-shadow: 0 5px 15px var(--shadow-color); 
+}
+.contact-form-container h2 {
+    text-align:center; 
+    margin-bottom:25px; 
+    font-weight: 600; 
+    color: var(--dark-color);
+}
+.contact-form-container .form-group label {
+    background-color: var(--card-bg-color); 
+}
+.contact-form-container textarea { 
+    width: 100%;
+    padding: 14px 15px; 
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: var(--font-family);
+    min-height: 120px; 
+    resize: vertical; 
+    background-color: var(--card-bg-color);
+}
+.contact-form-container textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3.5px rgba(0, 123, 255, 0.2), 0 1px 3px rgba(0,0,0,0.07);
+}
+.contact-form-container textarea:focus + label,
+.contact-form-container textarea.has-value + label {
+    top: -10px; 
+    font-size: 0.8rem; 
+    color: var(--primary-color); 
+}
+
+#formStatus { 
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+}
+#formStatus.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+#formStatus.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+.contact-info p { margin-bottom: 10px; font-size: 1.05rem; }
+.contact-info i { margin-right: 10px; color: var(--primary-color); }
+.contact-info h3 { margin-bottom: 15px; font-weight: 600; color: var(--dark-color); }
+
+
+/* === Star Rating Feedback CSS === */
+.star-rating-feedback-container { 
+    margin-top: 20px; 
+    padding-top: 15px; 
+    border-top: 1px solid var(--border-color); 
+    text-align: center;
+}
+.star-rating-feedback-container p { 
+    font-size: 0.9em; 
+    margin-bottom: 8px; 
+    color: var(--dark-color); 
+}
+.star-rating-feedback-container .stars {
+    cursor: pointer;
+    font-size: 1.5em; 
+    color: var(--star-default-color); 
+    margin-bottom: 10px;
+}
+.star-rating-feedback-container .stars i.fas.fa-star {
+    margin: 0 3px;
+    transition: color 0.2s ease-in-out;
+}
+.star-rating-feedback-container .stars i.fas.fa-star.selected,
+.star-rating-feedback-container .stars i.fas.fa-star:hover { 
+    color: var(--star-selected-color); 
+}
+.star-rating-feedback-container .feedback-details-star {
+    margin-top:10px; 
+    text-align:left; 
+}
+.star-rating-feedback-container .feedback-details-star textarea {
+    width:100%; 
+    min-height:70px; 
+    padding:10px; 
+    border-radius:5px; 
+    border:1px solid var(--border-color); 
+    font-family:var(--font-family); 
+    font-size:0.9rem; 
+    margin-bottom:8px; 
+    box-sizing: border-box;
+    background-color: var(--card-bg-color); 
+}
+.star-rating-feedback-container .feedback-details-star textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3.5px rgba(0, 123, 255, 0.15);
+}
+.star-rating-feedback-container .btn-feedback-submit-star {
+    display:block; 
+    margin:0 auto; 
+    padding: 8px 20px; 
+    font-size: 0.9rem; 
+    width: auto; 
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: #adb5bd; 
+    padding-top: 40px; /* Adjusted for ad slots moved out */
+    padding-bottom: 30px;
+    margin-top: 20px; /* Reduced margin as ads are now above */
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px; 
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: var(--primary-color);
+    bottom: 0;
+    left: 0;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #adb5bd;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    -webkit-tap-highlight-color: transparent; 
+}
+
+.footer-column ul li a:hover {
+    color: var(--primary-color);
+    padding-left: 5px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    -webkit-tap-highlight-color: transparent; 
+}
+
+.social-links a:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+
+/* Back to Top Button */
+#backToTopBtn {
+    display: none; 
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    border: none;
+    outline: none; 
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    padding: 10px 13px; 
+    border-radius: 50%;
+    font-size: 18px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.2s ease-in-out;
+    -webkit-tap-highlight-color: transparent; 
+}
+
+#backToTopBtn:hover {
+    background-color: var(--primary-hover-color);
+    transform: scale(1.1);
+}
+#backToTopBtn.show { 
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* --- Ad Slot Styling --- */
+.ad-slot {
+    margin: 0 auto; 
+    padding: 0; 
+    text-align: center; 
+    clear: both; 
+    line-height: 0; 
+}
+.ad-slot iframe { 
+    margin: 0 auto;
+    display: block; 
+}
+.text-center { /* General utility for centering */
+    text-align: center;
+}
+
+.ad-slot-header-page { /* For index.html below hero */
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.ad-slot-page-top { /* For inner pages, below header/nav */
+    margin-top: 10px; /* Space from header */
+    margin-bottom: 10px; /* Space before breadcrumb/title */
+}
+
+.ad-slot-above-footer { 
+    margin-top: 40px; 
+    margin-bottom: 15px; /* Space between ad and direct link */
+    padding: 15px 0;
+    border-top: 1px solid var(--border-color); 
+}
+.direct-link-above-footer {
+    text-align: center;
+    padding: 0 0 30px 0; /* Space before actual footer starts */
+    font-size: 0.9em;
+}
+.direct-link-above-footer a {
+    color: var(--secondary-color); 
+    text-decoration: underline;
+}
+.direct-link-above-footer a:hover {
+    color: var(--primary-color);
+}
+
+.ad-slot-below-result { margin-top: 25px; }
+.ad-slot-in-content { margin: 25px auto; }
+
+
+/* Default: Mobile ads visible, Desktop ads hidden */
+.ad-mobile {
+    display: inline-block; 
+    vertical-align: top; 
+}
+.ad-desktop {
+    display: none;
+    vertical-align: top;
+}
+
+/* Tablet and Desktop (e.g., 768px and up) */
+@media (min-width: 768px) {
+    .ad-mobile {
+        display: none;
+    }
+    .ad-desktop {
+        display: inline-block; 
+    }
+}
+
+/* Specific Ad Card styling for homepage grid */
+.grid .ad-card {
+    background-color: var(--card-bg-color);
+    border: 1px dashed var(--border-color);
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    padding: 20px; 
+    min-height: 250px; 
+    text-align: center;
+}
+.grid .ad-card > div[id^="container-"] { 
+    width: 100%;
+    max-width: 100%; 
+    margin-bottom: 5px; 
+}
+.grid .ad-card small {
+    color: var(--secondary-color);
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+
+/* Animations */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .hero h1 { font-size: 2.5rem; }
+    .hero p { font-size: 1.1rem; }
+    .section-title h2 { font-size: 2rem; }
+    .features-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .feature-item h3 { font-size: 1.2rem; }
+}
+@media (max-width: 768px) {
+    body { padding-top: 0; }
+    header { position: relative; height: auto; padding: 15px 0; }
+    .header-container { flex-direction: column; align-items: center; }
+    .logo { margin-bottom: 15px; }
+    nav ul { margin-top: 10px; padding-left: 0; justify-content: center; }
+    nav ul li { margin: 0 10px; }
+    .hero { padding: 60px 0; }
+    .hero h1 { font-size: 2rem; }
+    .hero p { font-size: 1rem; }
+    .why-choose-us { padding: 40px 0; }
+    .features-grid { grid-template-columns: 1fr; }
+    .grid { grid-template-columns: 1fr; } 
+    .grid .ad-card { min-height: auto; } 
+    .calculator-container { width: 90%; padding: 25px; }
+    .footer-content { grid-template-columns: 1fr; text-align: center; }
+    .footer-column h3::after { left: 50%; transform: translateX(-50%); }
+    .social-links { justify-content: center; }
+    #backToTopBtn { bottom: 20px; right: 20px; padding: 8px 11px; font-size: 16px; }
+    .calculator-page-title, .static-page-main-title { margin-top: 10px; margin-bottom: 15px; }
+
+}
+@media (max-width: 480px) {
+    nav ul li { margin: 0 8px; }
+    nav ul li a { font-size: 0.9rem; }
+    .card h3 { font-size: 1.4rem; }
+    .btn { padding: 10px 25px; font-size: 0.95rem; }
+    .calculator-container .btn:not(.copy-btn):not(.btn-feedback):not(.btn-feedback-submit-star),
+    .contact-form-container .btn { 
+        padding: 12px; font-size: 1rem; 
+    }
+    .calculator-page-title, .static-page-main-title { font-size: 1.8rem; }
+    .form-group label { left: 12px; top: 13px; font-size: 0.9rem; } 
+    .form-group input:focus + label,
+    .form-group input.has-value + label,
+    .form-group select:focus + label,
+    .form-group select.has-value + label,
+    .contact-form-container textarea:focus + label, 
+    .contact-form-container textarea.has-value + label {
+        top: -9px; font-size: 0.75rem;
+    }
+    .star-rating-feedback-container .stars { font-size: 1.3em; }
+    .star-rating-feedback-container .btn-feedback-submit-star { padding: 6px 15px; font-size: 0.85rem; }
+    .ad-slot-header-page, .ad-slot-page-top { margin-top:10px; margin-bottom:10px;}
+}
