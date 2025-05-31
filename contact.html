@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Contact Us - CalcTools Pro | Get in Touch</title>
+    <!-- MODIFIED: Meta Description updated -->
+    <meta name="description" content="Contact CalcTools Pro: Have questions, feedback, or suggestions about our free online calculators? Reach out easily – we're here to help and listen!">
+    <meta name="keywords" content="contact calc tools pro, get in touch, calculator support, feedback, suggestions, customer service">
+    <link rel="canonical" href="https://calc-tools-pro.vercel.app/contact.html">
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website"> <!-- Contact page is more of a 'website' part -->
+    <meta property="og:url" content="https://calc-tools-pro.vercel.app/contact.html">
+    <meta property="og:title" content="Contact Us - CalcTools Pro | Get in Touch">
+    <!-- MODIFIED: OG Description updated -->
+    <meta property="og:description" content="Contact CalcTools Pro: Questions, feedback, or suggestions for our free online calculators? Reach out – we're here to help!">
+    <meta property="og:image" content="https://calc-tools-pro.vercel.app/images/og-image-home.png">
+    <meta property="og:site_name" content="CalcTools Pro">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://calc-tools-pro.vercel.app/contact.html">
+    <meta name="twitter:title" content="Contact Us - CalcTools Pro | Get in Touch">
+    <!-- MODIFIED: Twitter Description updated -->
+    <meta name="twitter:description" content="Contact CalcTools Pro: Questions, feedback, or suggestions for our free online calculators? Reach out – we're here to help!">
+    <meta name="twitter:image" content="https://calc-tools-pro.vercel.app/images/og-image-home.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Schema.org for ContactPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact CalcTools Pro",
+      "description": "Get in touch with the CalcTools Pro team for support, feedback, suggestions, or inquiries about our free online calculators.",
+      "url": "https://calc-tools-pro.vercel.app/contact.html",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://calc-tools-pro.vercel.app/"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact Us"
+        }]
+      }
+      // No dateModified needed as much for contact page unless contact info changes.
+    }
+    </script>
+    <!-- Google Analytics - Replace G-JJ0LNJFJQS with your Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JJ0LNJFJQS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JJ0LNJFJQS');
+    </script>
+    <style>
+        /* Basic styling for the contact form */
+        .contact-form-container { max-width: 700px; margin: 0 auto; background-color: var(--card-bg-color); padding: 30px; border-radius: 8px; box-shadow: 0 5px 15px var(--shadow-color); }
+        .contact-form-container .form-group { margin-bottom: 25px; position: relative; }
+
+        .contact-form-container .form-group label {
+            font-weight: 500;
+            color: var(--secondary-color);
+            font-size: 0.95rem;
+            position: absolute;
+            left: 16px;
+            top: 15px;
+            pointer-events: none;
+            transition: all 0.2s ease-out;
+            background-color: var(--card-bg-color);
+            padding: 0 5px;
+        }
+         .contact-form-container .form-group label i { margin-right: 5px; }
+
+
+        .contact-form-container input[type="text"],
+        .contact-form-container input[type="email"],
+        .contact-form-container textarea {
+            width: 100%;
+            padding: 14px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 1rem;
+            font-family: var(--font-family);
+            transition: border-color 0.25s ease-out, box-shadow 0.25s ease-out;
+            background-color: var(--card-bg-color);
+        }
+
+        .contact-form-container .form-group input:focus + label,
+        .contact-form-container .form-group input.has-value + label,
+        .contact-form-container .form-group textarea:focus + label,
+        .contact-form-container .form-group textarea.has-value + label {
+            top: -10px;
+            font-size: 0.8rem;
+            color: var(--primary-color);
+        }
+
+        .contact-form-container input[type="text"]:focus,
+        .contact-form-container input[type="email"]:focus,
+        .contact-form-container textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3.5px rgba(0, 123, 255, 0.2), 0 1px 3px rgba(0,0,0,0.07);
+        }
+
+        .contact-form-container textarea { min-height: 120px; resize: vertical; }
+        .contact-form-container .btn { width: 100%; }
+
+        .contact-info p { margin-bottom: 10px; font-size: 1.05rem; }
+        .contact-info i { margin-right: 10px; color: var(--primary-color); }
+
+        #formStatus {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: 500;
+        }
+        #formStatus.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        #formStatus.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-calculator"></i> CalcTools Pro
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#calculator-list-section">Calculators</a></li>
+                    <li><a href="contact.html" style="color: var(--primary-color); font-weight: bold;">Contact</a></li> <!-- Current page -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Ad Slot: Below Header, Before Main Content -->
+    <div class="container">
+        <div class="ad-slot ad-slot-page-top text-center">
+            <div class="ad-mobile">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '5fa591f95a3d9ce0412a123c65ee11c0',
+                        'format' : 'iframe',
+                        'height' : 50,
+                        'width' : 320,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//maintaintournamentslick.com/5fa591f95a3d9ce0412a123c65ee11c0/invoke.js"></script>
+            </div>
+            <div class="ad-desktop">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '44a047698446d5e4d6d9a55c2dc26549',
+                        'format' : 'iframe',
+                        'height' : 90,
+                        'width' : 728,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//maintaintournamentslick.com/44a047698446d5e4d6d9a55c2dc26549/invoke.js"></script>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <nav aria-label="breadcrumb" class="breadcrumb-nav" style="margin-top: 0; margin-bottom: 20px;"> <!-- Adjusted margin -->
+            <a href="index.html">Home</a> / <span>Contact Us</span>
+        </nav>
+
+        <h1 class="static-page-main-title">Contact Us</h1>
+        
+        <section class="static-page-content" style="background-color: transparent; padding:0; box-shadow: none; margin-bottom: 20px; margin-top:0;">
+            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 30px;">We'd love to hear from you! Whether you have a question about our calculators, feedback, a suggestion for a new tool, or just want to say hello, please feel free to reach out using the form below or via email.</p>
+        </section>
+
+        <div class="contact-form-container">
+            <h2 style="text-align:center; margin-bottom:25px; font-weight: 600; color: var(--dark-color);">Send us a Message</h2>
+            <form id="contactForm" action="https://formspree.io/f/mgvywkwb" method="POST">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required placeholder=" ">
+                    <label for="name"><i class="fas fa-user"></i> Your Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required placeholder=" ">
+                    <label for="email"><i class="fas fa-envelope"></i> Your Email</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="subject" name="subject" required placeholder=" ">
+                    <label for="subject"><i class="fas fa-pen"></i> Subject</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" required placeholder=" "></textarea>
+                    <label for="message"><i class="fas fa-comment-dots"></i> Message</label>
+                </div>
+                <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+            </form>
+            <div id="formStatus" style="display: none;"></div>
+        </div>
+
+        <div class="contact-info" style="text-align: center; margin-top: 40px; margin-bottom: 40px;">
+             <h3 style="margin-bottom: 15px; font-weight: 600; color: var(--dark-color);">Alternatively, you can reach us via:</h3>
+            <p><i class="fas fa-envelope"></i>Email: <a href="mailto:gchat5723@gmail.com">gchat5723@gmail.com</a></p>
+            <p><i class="fas fa-globe"></i>Website: <a href="https://calc-tools-pro.vercel.app/">https://calc-tools-pro.vercel.app/</a></p>
+        </div>
+        
+        <p style="text-align:center; margin-bottom:40px;">You can also check our <a href="faqs.html">FAQs page</a> for answers to common questions.</p>
+        
+    </main>
+
+    <!-- Ad Slot & Direct Link: Above Footer -->
+    <div class="container">
+        <div class="ad-slot ad-slot-above-footer text-center">
+            <div class="ad-mobile">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '5fa591f95a3d9ce0412a123c65ee11c0',
+                        'format' : 'iframe',
+                        'height' : 50,
+                        'width' : 320,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//maintaintournamentslick.com/5fa591f95a3d9ce0412a123c65ee11c0/invoke.js"></script>
+            </div>
+            <div class="ad-desktop">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '44a047698446d5e4d6d9a55c2dc26549',
+                        'format' : 'iframe',
+                        'height' : 90,
+                        'width' : 728,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//maintaintournamentslick.com/44a047698446d5e4d6d9a55c2dc26549/invoke.js"></script>
+            </div>
+        </div>
+        <div class="direct-link-above-footer text-center">
+            <a href="https://maintaintournamentslick.com/qj1fubs6ce?key=c6ee3d4508957eb755ae3e13a1be29ea" target="_blank" rel="noopener sponsored">Check out our sponsor (Ad)</a>
+        </div>
+    </div>
+
+    <footer id="footer-section">
+         <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>CalcTools Pro</h3>
+                    <p>Providing simple, effective, and beautifully designed calculator tools for everyday needs.</p>
+                                      <div class="social-links">
+                     <a href="https://www.facebook.com/chapalch0r" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                     <a href="https://x.com/RapidR91566?t=j1xWFuKBsZ4qKtJScm-XTQ&s=09" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                     <a href="https://www.instagram.com/ashok_rai38?igsh=ZXFqNHZvNmw2M2x5" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                     <a href="https://www.linkedin.com/in/rv-creations-a92a78368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                 </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#calculator-list-section">All Calculators</a></li>
+                        <li><a href="calculators/age-calculator.html">Age Calculator</a></li>
+                        <li><a href="calculators/bmi-calculator.html">BMI Calculator</a></li>
+                        <li><a href="calculators/percentage-calculator.html">Percentage Calculator</a></li>
+                        <li><a href="calculators/emi-calculator.html">EMI Calculator</a></li>
+                        <li><a href="calculators/discount-calculator.html">Discount Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal & Support</h3>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="contact.html" style="color: var(--primary-color); font-weight: bold;">Contact Us</a></li> <!-- Current page -->
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© <span id="currentYear"></span> CalcTools Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <script>
+        // Script for handling animated labels and form submission status
+        document.addEventListener('DOMContentLoaded', function () {
+            const formInputs = document.querySelectorAll('.contact-form-container input[placeholder=" "], .contact-form-container textarea[placeholder=" "]');
+
+            formInputs.forEach(input => {
+                // Check on page load if there's already a value (e.g., browser autofill)
+                if (input.value.trim() !== '') {
+                    input.classList.add('has-value');
+                }
+                input.addEventListener('input', function() {
+                    if (this.value.trim() !== '') {
+                        this.classList.add('has-value');
+                    } else {
+                        this.classList.remove('has-value');
+                    }
+                });
+            });
+
+            const contactForm = document.getElementById('contactForm');
+            const formStatus = document.getElementById('formStatus');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', async function (event) {
+                    event.preventDefault();
+                    const formData = new FormData(contactForm);
+                    
+                    // Display a sending message (optional)
+                    formStatus.textContent = 'Sending...';
+                    formStatus.className = ''; // Reset classes
+                    formStatus.style.display = 'block';
+
+
+                    try {
+                        const response = await fetch(contactForm.action, {
+                            method: 'POST',
+                            body: formData,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        });
+
+                        if (response.ok) {
+                            formStatus.textContent = 'Thanks for your message! We will get back to you soon.';
+                            formStatus.className = 'success';
+                            contactForm.reset(); // Reset form fields
+                            formInputs.forEach(input => input.classList.remove('has-value')); // Reset has-value class
+                        } else {
+                            // Try to get error message from Formspree response
+                            const data = await response.json();
+                            if (data.errors && data.errors.length > 0) {
+                                formStatus.textContent = data.errors.map(error => error.message).join(', ');
+                            } else {
+                                formStatus.textContent = 'Oops! There was a problem submitting your form. Please try again or contact us via email.';
+                            }
+                            formStatus.className = 'error';
+                        }
+                    } catch (error) {
+                        formStatus.textContent = 'Oops! There was a network error. Please try again or contact us via email.';
+                        formStatus.className = 'error';
+                    }
+                    formStatus.style.display = 'block'; // Ensure it's visible
+                });
+            }
+        });
+    </script>
+    <!-- Link to main calculators.js for other functionalities like backToTopBtn and currentYear -->
+    <script src="js/calculators.js" defer></script> 
+    <!-- Social Bar Ad Code -->
+    <script type='text/javascript' src='//maintaintournamentslick.com/c9/68/0f/c9680f4fca72551495a953fa8261bb95.js'></script>
+</body>
+</html>
