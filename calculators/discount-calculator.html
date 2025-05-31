@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Discount Calculator - Find Sale Price & Savings | CalcTools Pro</title>
+    <!-- MODIFIED: Meta Description shortened and made more impactful -->
+    <meta name="description" content="CalcTools Pro's free Discount Calculator: Instantly find the final sale price & total savings after a percentage off. Smart shopping tool for sales & budgeting.">
+    <meta name="keywords" content="discount calculator, sale price calculator, percentage off calculator, savings calculator, calculate discount, shopping discount tool, final price calculator, price after discount, maximize savings, sale item calculator, clearance price, offer price">
+    <link rel="canonical" href="https://calc-tools-pro.vercel.app/calculators/discount-calculator.html">
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://calc-tools-pro.vercel.app/calculators/discount-calculator.html">
+    <meta property="og:title" content="Discount Calculator - Find Sale Price & Savings | CalcTools Pro">
+    <!-- MODIFIED: OG Description updated -->
+    <meta property="og:description" content="CalcTools Pro's free Discount Calculator: Instantly find sale price & total savings after a percentage off. Smart shopping tool.">
+    <meta property="og:image" content="https://calc-tools-pro.vercel.app/images/og-discount-calculator.png">
+    <meta property="og:site_name" content="CalcTools Pro">
+    <!-- ADDED: Article published and modified times -->
+    <meta property="article:published_time" content="2023-10-29T10:00:00+00:00">
+    <meta property="article:modified_time" content="2024-05-31T15:00:00+00:00">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://calc-tools-pro.vercel.app/calculators/discount-calculator.html">
+    <meta name="twitter:title" content="Discount Calculator - Find Sale Price & Savings | CalcTools Pro">
+    <!-- MODIFIED: Twitter Description updated -->
+    <meta name="twitter:description" content="CalcTools Pro's free Discount Calculator: Instantly find sale price & total savings after a percentage off. Smart shopping tool.">
+    <meta name="twitter:image" content="https://calc-tools-pro.vercel.app/images/og-discount-calculator.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+
+    <!-- Schema.org for SoftwareApplication (Calculator) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Discount Calculator",
+      "operatingSystem": "Web Browser",
+      "applicationCategory": "UtilitiesApplication",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Calculates the final price of an item after a percentage discount is applied and also shows the total amount saved. Useful for shopping and sales.",
+      "url": "https://calc-tools-pro.vercel.app/calculators/discount-calculator.html",
+      "image": "https://calc-tools-pro.vercel.app/images/og-discount-calculator.png",
+      "author": { "@type": "Organization", "name": "CalcTools Pro" },
+      "datePublished": "2023-10-29", <!-- MODIFIED: Consistent with article:published_time -->
+      "keywords": "discount calculator, sale price, savings tool, percentage off, shopping calculator, final price"
+    }
+    </script>
+    <!-- Google Analytics - Replace G-JJ0LNJFJQS with your Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JJ0LNJFJQS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JJ0LNJFJQS');
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-calculator"></i> CalcTools Pro
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#calculator-list-section">All Calculators</a></li>
+                    <li><a href="discount-calculator.html" style="color: var(--primary-color); font-weight: bold;" aria-current="page">Disc Calc</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Ad Slot: Below Header, Before Main Content -->
+    <div class="container">
+        <div class="ad-slot ad-slot-page-top text-center">
+            <div class="ad-mobile">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '5fa591f95a3d9ce0412a123c65ee11c0',
+                        'format' : 'iframe',
+                        'height' : 50,
+                        'width' : 320,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//maintaintournamentslick.com/5fa591f95a3d9ce0412a123c65ee11c0/invoke.js"></script>
+            </div>
+            <div class="ad-desktop">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '44a047698446d5e4d6d9a55c2dc26549',
+                        'format' : 'iframe',
+                        'height' : 90,
+                        'width' : 728,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//maintaintournamentslick.com/44a047698446d5e4d6d9a55c2dc26549/invoke.js"></script>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <nav aria-label="breadcrumb" class="breadcrumb-nav">
+            <a href="../index.html">Home</a> / <a href="../index.html#calculator-list-section">Calculators</a> / <span>Discount Calculator</span>
+        </nav>
+
+        <h1 class="calculator-page-title">Discount Calculator</h1>
+
+        <div class="calculator-container">
+            <form id="discountCalculatorForm">
+                <div class="form-group">
+                    <input type="number" id="originalPrice" name="originalPrice" required step="any" placeholder=" " min="0">
+                    <label for="originalPrice"><i class="fas fa-tag"></i> Original Price (₹)</label>
+                    <small class="form-text">e.g., 1000 (Enter the item's full price before discount)</small>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="discountPercentage" name="discountPercentage" required step="any" min="0" max="100" placeholder=" ">
+                    <label for="discountPercentage"><i class="fas fa-percent"></i> Discount Percentage (%)</label>
+                    <small class="form-text">e.g., 25 (Enter the discount rate, like 10 for 10%)</small>
+                </div>
+                <button type="button" id="calculateDiscountBtn" class="btn">
+                    <i class="fas fa-gifts"></i> Calculate Discount
+                </button>
+            </form>
+            <div id="discountResult" class="result-area" aria-live="polite">
+                <p>Enter price and discount to see the final price.</p>
+            </div>
+             <!-- Below Result Ad Slot -->
+            <div class="ad-slot ad-slot-below-result text-center">
+                <script async="async" data-cfasync="false" src="//maintaintournamentslick.com/a0c7020d7b6fff095d8061299356b36b/invoke.js"></script>
+                <div id="container-a0c7020d7b6fff095d8061299356b36b"></div>
+            </div>
+        </div>
+
+        <section class="calculator-info-section">
+            <h2>About the Discount Calculator</h2>
+            <!-- MODIFIED: Expanded "About" section -->
+            <p>The CalcTools Pro Discount Calculator is your indispensable companion for smart shopping and effective budgeting. This user-friendly tool is specifically designed to quickly and accurately determine the final price of an item after a percentage-based discount is applied. More than just showing the sale price, it also clearly highlights the exact monetary amount you save. Whether you're a seasoned bargain hunter navigating seasonal sales events, diligently comparing offers across different retailers, or simply trying to manage your personal finances by sticking to a budget, this calculator demystifies discount mathematics, empowering you to make informed purchasing decisions instantly. It's an essential tool for anyone looking to get the best value for their money.</p>
+
+            <!-- In-Content Ad Slot -->
+            <div class="ad-slot ad-slot-in-content text-center">
+                 <div class="ad-mobile">
+                    <script type="text/javascript">
+                        atOptions = {
+                            'key' : '82141c509797dd5332ed16f1b1328eeb',
+                            'format' : 'iframe',
+                            'height' : 250,
+                            'width' : 300,
+                            'params' : {}
+                        };
+                    </script>
+                    <script type="text/javascript" src="//maintaintournamentslick.com/82141c509797dd5332ed16f1b1328eeb/invoke.js"></script>
+                </div>
+                <div class="ad-desktop">
+                     <script type="text/javascript">
+                        atOptions = {
+                            'key' : '82141c509797dd5332ed16f1b1328eeb',
+                            'format' : 'iframe',
+                            'height' : 250,
+                            'width' : 300,
+                            'params' : {}
+                        };
+                    </script>
+                    <script type="text/javascript" src="//maintaintournamentslick.com/82141c509797dd5332ed16f1b1328eeb/invoke.js"></script>
+                </div>
+            </div>
+            <!-- MODIFIED: Expanded paragraph -->
+            <p>A clear understanding of how discounts work is fundamental to making financially sound purchasing decisions in today's consumer-driven world. Our calculator eliminates any guesswork or potential errors in manual calculations related to sale prices. It allows you to instantly visualize the real cost of an item post-discount and, crucially, the tangible value of that discount. This tool proves invaluable for a wide range of scenarios, from everyday grocery shopping and online purchases to major holiday sales (like Black Friday or end-of-season clearances), and any situation where a percentage-based price reduction is offered by retailers. If you need to perform other types of percentage-related calculations, such as figuring out "what is X% of Y" for tips or taxes, our versatile <a href="percentage-calculator.html" title="Use our Percentage Calculator">Percentage Calculator</a> is also available and can be extremely helpful in various contexts beyond just discounts.</p>
+
+            <!-- ADDED: New section for Word Count -->
+            <h2>Maximizing Savings: Strategies Beyond the Calculator</h2>
+            <p>While our Discount Calculator is an excellent tool for on-the-spot calculations, understanding broader strategies can help you maximize your savings even further. Here are some tips for smart shopping:</p>
+            <ul>
+                <li><strong>Compare Original Prices:</strong> A high discount percentage on an inflated original price might not be a good deal. Always try to compare the *final price* of similar items across different stores or brands.</li>
+                <li><strong>Look for Stackable Discounts:</strong> Some retailers allow combining multiple offers, like a percentage discount on top of a clearance price, or using a coupon code with an ongoing sale. Our calculator can be used sequentially for these scenarios.</li>
+                <li><strong>Understand "Up To" Discounts:</strong> Be wary of "up to X% off" sales, as not all items will have the maximum discount. Use the calculator for the specific item you're interested in.</li>
+                <li><strong>Factor in Additional Costs:</strong> Remember that taxes, shipping fees, or installation charges are usually applied *after* the discount. Keep these in mind for the true total cost.</li>
+                <li><strong>Timing Your Purchases:</strong> Many product categories have predictable sale cycles (e.g., electronics around holidays, clothing at the end of a season). Planning purchases around these times can lead to better discounts.</li>
+                <li><strong>Loyalty Programs and Cashback:</strong> Enrolling in store loyalty programs or using cashback credit cards/apps can provide additional savings on top of discounted prices.</li>
+                <li><strong>Price Matching Policies:</strong> Some stores offer price matching if you find the same item cheaper elsewhere. Knowing the discounted price from one store (using our calculator) can help you leverage this at another.</li>
+            </ul>
+            <p>By combining the quick calculations from our Discount Calculator with these savvy shopping strategies, you can become a more effective and budget-conscious consumer. For budgeting larger expenses or understanding loan affordability, our <a href="emi-calculator.html">EMI Calculator</a> can also be a valuable resource in your financial toolkit.</p>
+
+
+            <h2>How to Use the Discount Calculator</h2>
+            <!-- MODIFIED: Expanded "How to Use" section -->
+            <p>Utilizing our Discount Calculator is exceptionally simple and designed for immediate results. Here’s a detailed, step-by-step guide to help you through the process:</p>
+            <ul>
+                <li><strong>Step 1: Enter the Original Price (₹):</strong>
+                    <ul>
+                        <li>Locate the input field clearly labeled "Original Price (₹)". This is where you will input the initial, full price of the product or service *before* any discount is applied.</li>
+                        <li>For example, if an item you are considering is originally priced at ₹1200, you would type `1200` into this field.</li>
+                        <li>Ensure that you enter a non-negative numerical value. The currency symbol (₹) is indicated for clarity but should not be typed into the input field itself.</li>
+                    </ul>
+                </li>
+                <li><strong>Step 2: Enter the Discount Percentage (%):</strong>
+                    <ul>
+                        <li>Find the next input field, labeled "Discount Percentage (%)". Here, you will input the discount rate that is being offered on the item.</li>
+                        <li>For instance, if the item is advertised with a 25% discount, you should enter `25`. It's important *not* to include the '%' symbol in the input field; just the numerical value of the percentage.</li>
+                        <li>The discount percentage should typically be a value between 0 (no discount) and 100 (item is free, though rarely applicable in this context).</li>
+                    </ul>
+                </li>
+                <li><strong>Step 3: Initiate the Calculation:</strong>
+                    <ul>
+                        <li>After you have accurately entered both the original price and the discount percentage, click the prominent button labeled "Calculate Discount."</li>
+                        <li>This action triggers the calculator to perform the necessary computations based on your inputs.</li>
+                    </ul>
+                </li>
+                <li><strong>Step 4: View Your Discounted Price & Savings:</strong>
+                    <ul>
+                        <li>Almost instantly, the calculator will display two key pieces of information in the designated result area, usually found directly below the input fields:</li>
+                        <li><strong>Final Price:</strong> This is the price you will actually pay for the item after the discount has been successfully applied. It represents the net cost to you.</li>
+                        <li><strong>Amount Saved:</strong> This figure shows the total monetary value of the discount you've received. It's the difference between the original price and the final price.</li>
+                    </ul>
+                </li>
+                <li><strong>Step 5: Copy Result (Optional Feature):</strong>
+                    <ul>
+                        <li>If a valid calculation result is shown, a "Copy Result" or similar button will typically appear.</li>
+                        <li>Clicking this button allows you to easily copy the details of the final price and the amount saved to your device's clipboard. This is convenient for record-keeping, comparing deals, or sharing the information.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>Calculation Method</h2>
+            <!-- MODIFIED: Expanded "Calculation Method" section -->
+            <p>The Discount Calculator employs standard and straightforward mathematical formulas to accurately determine both the final, discounted price and the total amount of money saved. Here’s a breakdown of the two-step process:</p>
+            <ol>
+                <li><strong>Step 1: Calculate the Amount Saved (The Discount Value):</strong>
+                    <p>The first step is to determine the actual monetary value of the discount. This is done using the formula:</p>
+                    <p><code>Amount Saved = (Original Price × Discount Percentage) / 100</code></p>
+                    <p>Let's illustrate with an example: Suppose an item has an original price of ₹1200 and is being offered with a 25% discount.</p>
+                    <p><code>Amount Saved = (₹1200 × 25) / 100</code></p>
+                    <p><code>Amount Saved = ₹30000 / 100</code></p>
+                    <p><code>Amount Saved = ₹300</code></p>
+                    <p>So, in this case, the discount provides a saving of ₹300.</p>
+                </li>
+                <li><strong>Step 2: Calculate the Final Price (The Price You Pay):</strong>
+                    <p>Once the "Amount Saved" has been calculated, determining the final price is simple. You subtract the "Amount Saved" from the "Original Price":</p>
+                    <p><code>Final Price = Original Price - Amount Saved</code></p>
+                    <p>Continuing with our example where the Original Price is ₹1200 and the Amount Saved is ₹300:</p>
+                    <p><code>Final Price = ₹1200 - ₹300</code></p>
+                    <p><code>Final Price = ₹900</code></p>
+                    <p>Therefore, after the 25% discount, the final price you would pay for the item is ₹900.</p>
+                </li>
+            </ol>
+            <p>Our online Discount Calculator performs these calculations instantly and accurately as soon as you input the required values and click the calculate button, providing you with immediate results to help you shop smarter and make informed financial decisions without the need for manual computation.</p>
+
+            <h2>Tips for Using the Discount Calculator Effectively</h2>
+            <!-- MODIFIED: Expanded "Tips" section -->
+            <ul>
+                <li><strong>Compare Deals Across Retailers:</strong> When multiple stores offer discounts on similar items, or even the same item, use the calculator to quickly determine which deal truly offers the best final price. Don't be swayed by high percentage-off figures alone; the starting price matters.</li>
+                <li><strong>Effective Budgeting During Sales:</strong> Knowing the final price of an item beforehand helps you stay within your shopping budget, especially during large sales events like Black Friday, Cyber Monday, end-of-season clearances, or other holiday sales where impulse buying can be tempting.</li>
+                <li><strong>Verify In-Store or Online Calculations:</strong> Sometimes, sale signs or online listings can be confusing, or errors can occur in advertised prices. Use the calculator to independently double-check if the advertised sale price is correct based on the original price and discount percentage.</li>
+                <li><strong>Account for Additional Costs:</strong> Remember that the final price calculated by this tool typically does not include potential sales tax (like GST), shipping fees (for online purchases), customs duties (for international orders), or other supplementary charges (like installation or extended warranties). Factor these in separately to understand the total outlay.</li>
+                <li><strong>Sequential Discounts:</strong> If an item has multiple discounts (e.g., "20% off, then an additional 10% off for members"), use the calculator sequentially. First, calculate the price after the initial 20% discount. Then, use that new, reduced price as the "Original Price" to calculate the effect of the subsequent 10% discount.</li>
+                <li><strong>Understanding Fixed Amount Discounts:</strong> This calculator is for percentage-based discounts. If a discount is a fixed amount (e.g., "₹500 off"), simple subtraction is all that's needed, or you can use our standard <a href="../index.html#calculator-list-section">calculators</a> for basic arithmetic if required.</li>
+            </ul>
+
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            <dl>
+                <dt><strong>1. Can I calculate a discount if I only know the final price and the discount percentage, and want to find the original price?</strong></dt>
+                <dd>This specific Discount Calculator is designed to find the final price given the original price and the discount percentage. To find the original price when you know the final price and the discount percentage, you would need a different type of calculation, often referred to as a "reverse discount calculation" or "original price calculator." For example, if an item costs ₹80 after a 20% discount, the original price was ₹100. This tool doesn't do that directly.</dd>
+
+                <dt><strong>2. What if there are multiple discounts on an item (e.g., an initial 20% off, and then an additional 10% off the already discounted price)?</strong></dt>
+                <dd>Multiple discounts are almost always applied sequentially, not additively (a 20% + 10% discount is NOT a 30% discount). To calculate this correctly:
+                    <ol>
+                        <li>First, calculate the price after the first discount (e.g., 20% off ₹100 = ₹80).</li>
+                        <li>Then, use that newly calculated price (₹80) as the "Original Price" in our calculator and apply the second discount (e.g., 10% off ₹80 = ₹8 savings, final price ₹72).</li>
+                    </ol>
+                    So, a 20% then 10% discount on ₹100 results in a final price of ₹72, which is equivalent to a single 28% discount, not 30%.
+                </dd>
+
+                <dt><strong>3. Does this calculator handle sales tax or GST?</strong></dt>
+                <dd>No, this Discount Calculator is focused solely on determining the price of an item *after* the percentage discount has been applied to the original price. Sales tax (like GST, VAT, etc.), if applicable in your region, would typically be calculated on the final discounted price. You would need to calculate the tax amount separately and add it to the discounted price to find the grand total. Our <a href="percentage-calculator.html">Percentage Calculator</a> can help you calculate the tax amount.</dd>
+
+                <dt><strong>4. Is a higher discount percentage always a better deal financially?</strong></dt>
+                <dd>Not necessarily. A higher discount percentage on a significantly higher original price might still result in a more expensive final item compared to a lower discount percentage on a more reasonably priced item. Always compare the *final prices* calculated by the tool to determine the actual best deal. For example, 50% off a ₹2000 item (Final Price: ₹1000) is more expensive than 10% off a ₹1000 item (Final Price: ₹900). Other tools on our site, like those found in our <a href="../index.html#calculator-list-section" title="View all our calculator tools">main tools list</a>, might also assist in broader financial planning and comparison.</dd>
+                
+                <!-- ADDED: New FAQ for word count -->
+                <dt><strong>5. What if the discount is a fixed amount instead of a percentage?</strong></dt>
+                <dd>This calculator is specifically designed for percentage-based discounts (e.g., "15% off"). If a retailer offers a fixed amount off (e.g., "₹200 off any purchase over ₹1000"), you would simply subtract that fixed amount from the original price. This tool isn't needed for that, but it's important to distinguish between the two types of offers.</dd>
+
+                <dt><strong>6. How can I be sure the "Original Price" listed by a retailer is genuine?</strong></dt>
+                <dd>That's a valid concern. Some retailers might inflate original prices to make discounts appear larger. It's good practice to monitor prices over time if possible, use price comparison websites, or check customer reviews to get a sense of an item's typical selling price before a sale. Our calculator will accurately compute the discount based on the price you enter, but the genuineness of that entered "original price" is something shoppers should be mindful of.</dd>
+            </dl>
+             <p>For more general questions about CalcTools Pro or our range of online calculators, please visit our main <a href="../faqs.html" title="Read Frequently Asked Questions">FAQs page</a>. If you have specific queries or feedback regarding the Discount Calculator, feel free to <a href="../contact.html" title="Contact CalcTools Pro">contact us</a> directly.</p>
+        </section>
+    </main>
+
+    <!-- Ad Slot & Direct Link: Above Footer -->
+    <div class="container">
+        <div class="ad-slot ad-slot-above-footer text-center">
+            <div class="ad-mobile">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '5fa591f95a3d9ce0412a123c65ee11c0',
+                        'format' : 'iframe',
+                        'height' : 50,
+                        'width' : 320,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//maintaintournamentslick.com/5fa591f95a3d9ce0412a123c65ee11c0/invoke.js"></script>
+            </div>
+            <div class="ad-desktop">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '44a047698446d5e4d6d9a55c2dc26549',
+                        'format' : 'iframe',
+                        'height' : 90,
+                        'width' : 728,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//maintaintournamentslick.com/44a047698446d5e4d6d9a55c2dc26549/invoke.js"></script>
+            </div>
+        </div>
+        <div class="direct-link-above-footer text-center">
+            <a href="https://maintaintournamentslick.com/qj1fubs6ce?key=c6ee3d4508957eb755ae3e13a1be29ea" target="_blank" rel="noopener sponsored">Check out our sponsor (Ad)</a>
+        </div>
+    </div>
+
+    <footer id="footer-section">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>CalcTools Pro</h3>
+                    <p>Quick and accurate tools for your daily calculations.</p>
+                     <div class="social-links">
+                        <a href="https://www.facebook.com/chapalch0r" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/RapidR91566?t=j1xWFuKBsZ4qKtJScm-XTQ&s=09" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/ashok_rai38?igsh=ZXFqNHZvNmw2M2x5" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/rv-creations-a92a78368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#calculator-list-section">All Calculators</a></li>
+                        <li><a href="age-calculator.html">Age Calculator</a></li>
+                        <li><a href="bmi-calculator.html">BMI Calculator</a></li>
+                        <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+                        <li><a href="emi-calculator.html">EMI Calculator</a></li>
+                        <li><a href="discount-calculator.html">Discount Calculator</a></li>
+                    </ul>
+                </div>
+                 <div class="footer-column">
+                    <h3>Legal & Support</h3>
+                    <ul>
+                        <li><a href="../privacy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms of Service</a></li>
+                        <li><a href="../faqs.html">FAQs</a></li>
+                        <li><a href="../contact.html">Contact Us</a></li>
+                        <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© <span id="currentYear"></span> CalcTools Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <script src="../js/calculators.js" defer></script>
+    <!-- Social Bar Ad Code -->
+    <script type='text/javascript' src='//maintaintournamentslick.com/c9/68/0f/c9680f4fca72551495a953fa8261bb95.js'></script>
+</body>
+</html>
